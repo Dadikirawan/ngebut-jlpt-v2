@@ -1,9 +1,26 @@
 import n1Data from './n1_structured.json' with { type: 'json' }
 import n2Data from './n2_structured.json' with { type: 'json' }
+import n1Explanations from './n1_explanations.json' with { type: 'json' }
+import n2Explanations from './n2_explanations.json' with { type: 'json' }
 
 const DATA_BY_LEVEL = {
   N1: n1Data,
   N2: n2Data,
+}
+
+const EXPLANATIONS_BY_LEVEL = {
+  N1: n1Explanations,
+  N2: n2Explanations,
+}
+
+function _getExplanation(level, problemNumber, questionNumber) {
+  const exp = EXPLANATIONS_BY_LEVEL[level]
+  if (!exp) return null
+  const key = `${problemNumber}-${questionNumber}`
+  const entry = exp[key]
+  if (!entry || typeof entry.alasan !== 'string') return null
+  const trimmed = entry.alasan.trim()
+  return trimmed.length > 0 ? trimmed : null
 }
 
 const VALID_TYPES = [
@@ -54,11 +71,13 @@ function flattenQuestions(level) {
 
     if (problem.type === 'vocab_grammar_choice') {
       for (const q of problem.questions) {
-        results.push(_pickQuestionFields(q, base))
+        const pick = _pickQuestionFields(q, base)
+        pick.explanation = _getExplanation(level, problem.problem_number, q.number)
+        results.push(pick)
       }
     } else if (problem.type === 'sentence_order') {
       for (const q of problem.questions) {
-        results.push({
+        const item = {
           ...base,
           question_number: q.number,
           prompt_template: q.prompt_template,
@@ -67,7 +86,9 @@ function flattenQuestions(level) {
           correct_order: q.correct_order,
           options: q.fragments ? { ...q.fragments } : undefined,
           answer: q.answer,
-        })
+          explanation: _getExplanation(level, problem.problem_number, q.number),
+        }
+        results.push(item)
       }
     } else if (problem.type === 'cloze_passage') {
       const passageCtx = {
@@ -81,6 +102,7 @@ function flattenQuestions(level) {
           prompt: `【${b.number}】`,
           options: b.options ? { ...b.options } : undefined,
           answer: b.answer,
+          explanation: _getExplanation(level, problem.problem_number, b.number),
         })
       }
     } else if (problem.type === 'reading') {
@@ -106,6 +128,7 @@ function flattenQuestions(level) {
             prompt: q.prompt,
             options: q.options ? { ...q.options } : undefined,
             answer: q.answer,
+            explanation: _getExplanation(level, problem.problem_number, q.number),
           })
         }
       }

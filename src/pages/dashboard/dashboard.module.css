@@ -1,0 +1,484 @@
+.dashboardContainer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  padding: 40px 24px;
+  background: linear-gradient(180deg, var(--plum-soft) 0%, var(--paper) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.heroHeadline {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-h);
+  max-width: 880px;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  min-height: 48px;
+}
+
+.heroSubtext {
+  font-size: 16px;
+  color: var(--text);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.heroCtaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.ctaPrimary {
+  background: linear-gradient(135deg, var(--plum-deep), var(--plum-600));
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(84, 27, 76, 0.18);
+}
+
+.ctaPrimary:active {
+  transform: translateY(0);
+}
+
+.ctaSecondary {
+  background: transparent;
+  border: 2px solid var(--navy-ink);
+  color: var(--navy-ink);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.ctaSecondary:hover {
+  background: var(--navy-soft);
+}
+
+.profileAndLevelRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .profileAndLevelRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.learnerCard {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.learnerRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--plum-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--plum-deep);
+  flex-shrink: 0;
+}
+
+.learnerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.learnerName {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.learnerSubtitle {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.progressWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progressBar {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: var(--plum-soft);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--plum-deep), var(--plum-600));
+  border-radius: var(--radius-sm);
+  transition: width 0.3s ease;
+}
+
+.progressLabel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.progressHint {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.levelSelectorWrap {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.levelSelectorHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.levelSelectorTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-h);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.levelSelectorSub {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.levelToggleContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.levelPillGroup {
+  display: inline-flex;
+  background: var(--plum-soft);
+  padding: 4px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.levelPill {
+  background: transparent;
+  border: none;
+  color: var(--plum-deep);
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.12s ease;
+}
+
+.levelPillActive {
+  background: var(--plum-deep);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.levelDesc {
+  font-size: 13px;
+  color: var(--text);
+  flex: 1;
+  min-width: 200px;
+}
+
+.statsGridSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-h);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .heroHeadline {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboardContainer {
+    padding: 20px 16px;
+    gap: 24px;
+  }
+  .heroSection {
+    padding: 28px 16px;
+    gap: 18px;
+  }
+  .heroHeadline {
+    font-size: 24px;
+  }
+  .heroSubtext {
+    font-size: 15px;
+  }
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+    padding: 14px 18px;
+    justify-content: center;
+  }
+  .heroCtaRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .levelPill {
+    padding: 10px 18px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+  .problemCard {
+    min-height: auto;
+  }
+  .statValue {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroHeadline {
+    font-size: 20px;
+  }
+  .heroSubtext {
+    font-size: 14px;
+  }
+  .statValue {
+    font-size: 22px;
+  }
+  .statCard {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statCard {
+  background: var(--paper);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-h);
+  line-height: 1.1;
+}
+
+.statSub {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.problemListSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.problemListHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.problemListTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-h);
+}
+
+.problemListSub {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .problemGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.problemCard {
+  background: var(--paper);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+}
+
+.problemCard:hover {
+  background: var(--plum-soft);
+  border-color: var(--plum-deep);
+  transform: translateY(-1px);
+}
+
+.problemCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.problemBadge {
+  background: var(--navy-soft);
+  color: var(--navy-ink);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.typePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.problemTitleJp {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.problemTitleId {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.problemDescription {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.problemCardBottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.questionCount {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--plum-deep);
+}

@@ -1,5 +1,7 @@
 {
   "name": "ngebut-jlpt-v2",
+  "displayName": "NgebutJLPT v2",
+  "description": "NgebutJLPT v2 — Aplikasi Try Out Soal JLPT Resmi Level N1 & N2",
   "private": true,
   "version": "0.0.0",
   "type": "module",

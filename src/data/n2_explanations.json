@@ -1,0 +1,338 @@
+{
+  "1-1": {
+    "alasan": "Jawaban benar: せつめい (説明) = 'penjelasan'. Opsi lain adalah bacaan yang tidak eksis untuk kanji ini."
+  },
+  "1-2": {
+    "alasan": "Jawaban benar: じんこう (人口) = 'populasi'. Opsi lain seperti にんぐち/にんこう adalah bacaan yang salah (bukan bacaan resmi 人口)."
+  },
+  "1-3": {
+    "alasan": "Jawaban benar: しげん (資源) = 'sumber daya'. Opsi lain seperti しけん('ujian') adalah kata beda meski mirip bunyi."
+  },
+  "1-4": {
+    "alasan": "Jawaban benar: ぜせい (是正) = 'koreksi/perbaikan'. Opsi lain adalah bacaan yang salah."
+  },
+  "1-5": {
+    "alasan": "Jawaban benar: はっき (発揮) = 'menunjukkan/mewujudkan (efek)'. Opsi lain adalah variasi bacaan yang tidak tepat untuk kanji ini."
+  },
+  "1-6": {
+    "alasan": "Jawaban benar: ずいじ (随時) = 'sewaktu-waktu'. Opsi lain adalah bacaan yang salah."
+  },
+  "1-7": {
+    "alasan": "Jawaban benar: どうにゅう (導入) = 'penerapan/pengenalan sistem baru'. Opsi lain seperti どうじゅう adalah bacaan yang tidak eksis."
+  },
+  "1-8": {
+    "alasan": "Jawaban benar: けんあん (懸案) = 'masalah tertunda'. Opsi lain adalah bacaan yang salah."
+  },
+  "1-9": {
+    "alasan": "Jawaban benar: しんちょう (慎重) = 'hati-hati/cermat'. Opsi lain adalah permutasi bacaan yang salah."
+  },
+  "1-10": {
+    "alasan": "Jawaban benar: ふくまれて (含まれて) = 'terkandung'. Opsi lain adalah bentuk kata yang tidak sesuai konteks kalimat."
+  },
+  "1-11": {
+    "alasan": "Jawaban benar: かくじゅう (拡充) = 'perluasan/penguatan'. Opsi lain seperti かくちょう('perluasan area/ekspansi') mirip tapi bacaan berbeda untuk kanji ini."
+  },
+  "1-12": {
+    "alasan": "Jawaban benar: しこう (施行) = 'pemberlakuan (hukum/sistem)'. Opsi lain seperti せこう juga valid untuk konteks berbeda (pelaksanaan konstruksi), tapi di sini yang tepat しこう karena konteksnya sistem/hukum."
+  },
+  "1-13": {
+    "alasan": "Jawaban benar: まと (的) = 'sasaran'. Opsi lain adalah bacaan yang tidak tepat untuk konteks 'sasaran kritik'."
+  },
+  "1-14": {
+    "alasan": "Jawaban benar: しょうにん (承認) = 'persetujuan/pengesahan'. Opsi lain adalah bacaan yang salah untuk kanji ini."
+  },
+  "1-15": {
+    "alasan": "Jawaban benar: ぞうだい (増大) = 'meningkat/bertambah besar'. Opsi lain seperti そうだい('megah') punya makna beda meski kanjinya mirip."
+  },
+  "2-16": {
+    "alasan": "じっし ditulis 実施 (pelaksanaan). B/C/D bukan kombinasi kanji yang eksis untuk kata ini."
+  },
+  "2-17": {
+    "alasan": "もんだいてん ditulis 問題点 (poin masalah). A/B/C bukan kombinasi kanji yang eksis untuk kata ini."
+  },
+  "2-18": {
+    "alasan": "かんき (dalam konteks \"注意をかんきした\" = membangkitkan perhatian) ditulis 喚起. B 換気 artinya \"ventilasi udara\" — homofon tapi beda makna & kanji, salah konteks di sini."
+  },
+  "2-19": {
+    "alasan": "いけん ditulis 意見 (pendapat). A/C/D bukan kombinasi kanji yang eksis untuk kata ini."
+  },
+  "2-20": {
+    "alasan": "こうか ditulis 効果 (efek). B/C/D bukan kombinasi kanji yang eksis untuk kata ini."
+  },
+  "3-21": {
+    "alasan": "Sufiks 型 (kata) dipakai untuk \"jenis/tipe\" alat elektronik hemat energi — \"省エネ型\" = tipe hemat energi. 化/性/式 tidak membentuk kata baku untuk konteks ini."
+  },
+  "3-22": {
+    "alasan": "Sufiks 性 (sei) dipakai untuk \"実効性\" = sifat keefektifan nyata (abstrak, sifat). 度/感/化 tidak membentuk kata baku 実効 + sufiks di sini."
+  },
+  "3-23": {
+    "alasan": "特有 (tokuyuu) = \"khas dari/spesifik untuk\" — \"地域特有の課題\" = masalah yang khas daerah tertentu. 専属/独自/固有 punya nuansa berbeda (eksklusif/orisinal/inheren), kurang pas untuk \"masalah khas suatu daerah\"."
+  },
+  "3-24": {
+    "alasan": "Sufiks 向け (muke) = \"diperuntukkan bagi\" — \"高齢者向けの住宅\" = perumahan yang diperuntukkan bagi lansia. 用/対象/専門 tidak membentuk kolokasi baku sealami 向け di sini."
+  },
+  "3-25": {
+    "alasan": "Sufiks 化 (ka) = \"proses menjadi\" — \"情報化社会\" = masyarakat yang terinformatisasi (kata baku umum). 性/型/的 tidak membentuk kata baku ini."
+  },
+  "4-26": {
+    "alasan": "衝撃 = \"kejutan/guncangan besar\" — pas untuk berita yang beri dampak besar ke rakyat. 影響(pengaruh umum)/刺激(rangsangan)/打撃(pukulan/kerugian) kurang pas nuansanya untuk \"berita mengejutkan\"."
+  },
+  "4-27": {
+    "alasan": "経験 = \"pengalaman\" (umum, berguna untuk kerja). 履歴(riwayat/CV)/体験(pengalaman personal-sensasional)/実績(prestasi/rekam jejak) kurang pas untuk konteks \"10 tahun di luar negeri yang berguna untuk kerja sekarang\"."
+  },
+  "4-28": {
+    "alasan": "措置 = \"tindakan/langkah resmi\" (formal, biasa dipakai pemerintah). 対策/対応/処置 semua mirip tapi 措置 adalah istilah paling formal-institusional untuk \"langkah darurat pemerintah\"."
+  },
+  "4-29": {
+    "alasan": "簡素化 = \"disederhanakan\" — kolokasi baku dengan 手続き (prosedur). 単純化/効率化/簡略化 mirip tapi 簡素化 adalah pasangan paling alami untuk \"手続きが簡素化される\"."
+  },
+  "4-30": {
+    "alasan": "増加 = \"bertambah (jumlah)\" — pas untuk permintaan layanan medis yang jumlahnya naik. 上昇(naik, biasa untuk harga/suhu)/増大(membesar, lebih abstrak)/拡大(meluas) kurang pas untuk \"permintaan/demand\" secara spesifik."
+  },
+  "4-31": {
+    "alasan": "配慮 = \"kepedulian/pertimbangan\" — kolokasi baku \"環境問題への配慮\". 気配り(lebih personal, perhatian kecil)/考慮(pertimbangan netral)/留意(catatan/kewaspadaan) kurang pas untuk konteks sikap perusahaan pada isu lingkungan."
+  },
+  "4-32": {
+    "alasan": "普及 = \"tersebar luas/dipakai umum\" — pas untuk teknologi baru yang belum meluas ke masyarakat. 浸透(meresap)/拡散(menyebar)/定着(mengakar) mirip tapi 普及 adalah kolokasi paling umum untuk \"teknologi belum X ke masyarakat\"."
+  },
+  "4-33": {
+    "alasan": "着目する = \"mulai memperhatikan/menyoroti\" — pas untuk konsumen yang kini juga menyoroti kualitas (bukan cuma harga). 注目する/留意する/重視する mirip tapi 着目する paling pas untuk \"mulai fokus pada aspek baru\"."
+  },
+  "4-34": {
+    "alasan": "緩和 = \"meredakan (gejala)\" — kolokasi medis baku \"症状を緩和する\". 改善(memperbaiki)/解消(menghilangkan total)/軽減(mengurangi beban) kurang sepas 緩和 untuk konteks efek obat pada gejala."
+  },
+  "4-35": {
+    "alasan": "傾向 = \"kecenderungan/tren\" — kata paling umum & netral untuk tren penurunan angka kelahiran. 趨勢/風潮/動向 semua mirip tapi 傾向 adalah pasangan paling standar dengan 少子化."
+  },
+  "4-36": {
+    "alasan": "異論 = \"pendapat berbeda/keberatan\" (formal, dalam diskusi internal). 異議(keberatan formal-legal)/反論(bantahan)/反対(penolakan) kurang pas untuk nuansa \"suara ketidaksetujuan yang muncul di internal perusahaan\"."
+  },
+  "4-37": {
+    "alasan": "検討 = \"pertimbangan/kajian\" — kata paling umum untuk pemerintah yang sedang mengkaji masalah dengan hati-hati. 審議(kajian formal di parlemen)/討議(diskusi/debat)/協議(perundingan) kurang pas untuk konteks umum ini."
+  },
+  "4-38": {
+    "alasan": "賛同 = \"dukungan/persetujuan\" — pas untuk mendapat dukungan dari anak muda agar program berjalan. 参加(partisipasi)/協力(kerja sama)/支援(bantuan) mirip tapi 賛同を得て adalah kolokasi baku untuk \"mendapat dukungan hingga program berjalan lancar\"."
+  },
+  "4-39": {
+    "alasan": "手頃 = \"terjangkau\" — kolokasi baku \"価格の手頃さ\" (harga yang bersahabat). 良心的(jujur/adil harga)/妥当(wajar)/適正(sesuai standar) mirip tapi 手頃 paling pas untuk nuansa \"harga ramah kantong\"."
+  },
+  "4-40": {
+    "alasan": "深刻化する = \"makin serius/parah\" — pas untuk fenomena yang diprediksi memburuk. 拡大(meluas)/増幅(diperkuat)/悪化(memburuk, mirip tapi kurang formal) — 深刻化 paling pas untuk konteks prediksi ahli yang formal."
+  },
+  "4-41": {
+    "alasan": "推進する = \"mendorong maju/menggalakkan\" — pas untuk perusahaan yang menggalakkan kegiatan pelestarian lingkungan. 促進(mempercepat)/奨励(menganjurkan)/助長(malah nuansa negatif — memperburuk/memicu) — 推進 paling netral-positif untuk konteks korporat."
+  },
+  "4-42": {
+    "alasan": "継承する = \"mewariskan (budaya, tradisi)\" — kolokasi baku dengan budaya tradisional ke generasi berikut. 継続(melanjutkan)/保存(mengawetkan)/伝承(mirip tapi lebih ke cerita rakyat lisan) — 継承 paling pas untuk \"budaya tradisional diwariskan ke generasi muda\"."
+  },
+  "4-43": {
+    "alasan": "一変させる = \"mengubah total secara tiba-tiba\" — pas untuk pernyataan yang langsung mengubah suasana rapat sekaligus. 転換(pengalihan bertahap)/急変(perubahan mendadak, mirip tapi kurang pas kolokasi dengan 空気)/変化(perubahan umum) — 一変 paling pas untuk \"suasana berubah total seketika\"."
+  },
+  "4-44": {
+    "alasan": "提唱する = \"mencetuskan/mengusulkan (teori/gagasan baru)\" — kolokasi baku dengan 仮説 (hipotesis). 主張(mengklaim/menegaskan pendapat)/提起(mengangkat isu)/提示(menyajikan) kurang pas untuk konteks tim peneliti mengusulkan hipotesis baru."
+  },
+  "4-45": {
+    "alasan": "歯止めがかからない = idiom \"tidak bisa direm/dihentikan\" — pas untuk arus keluar penduduk muda yang terus berlanjut tanpa henti. 抑制/制限/規制 semua kata kerja formal yang tidak membentuk idiom \"がかからない\" dengan alami seperti 歯止め."
+  },
+  "5-46": {
+    "alasan": "迅速 = 'cepat/sigap', paling dekat C 素早かった. A(hati-hati)/B(tepat)/D(teliti) beda makna, bukan soal kecepatan."
+  },
+  "5-47": {
+    "alasan": "曖昧 = 'kabur/tidak jelas', paling dekat B はっきりしない. A/C/D (terlalu singkat/detail/teknis) tidak berkaitan dengan makna kabur."
+  },
+  "5-48": {
+    "alasan": "却下された = 'ditolak resmi', paling dekat A 認められなかった (tidak diterima). B(ditunda)/C(dipertimbangkan)/D(didukung) beda makna dengan ditolak."
+  },
+  "5-49": {
+    "alasan": "一定の根拠 = 'landasan sampai taraf tertentu', paling dekat D ある程度の (sampai taraf tertentu). A(cukup)/B(jelas)/C(pasti) semua terlalu kuat dibanding nuansa 一定 yang parsial."
+  },
+  "5-50": {
+    "alasan": "懐疑的 = 'skeptis/meragukan', paling dekat C 疑わしいと考える. A(optimis)/B(netral)/D(positif) semua berlawanan arah dengan sikap skeptis."
+  },
+  "5-51": {
+    "alasan": "形骸化しつつある (pola つつある = sedang berproses) = 'perlahan jadi formalitas kosong', paling dekat B 徐々にそうなっている. A/C/D (sementara/sudah selesai/sepenuhnya) tidak menangkap nuansa proses bertahap dari つつある."
+  },
+  "5-52": {
+    "alasan": "要領を得ない = 'tidak jelas intinya', paling dekat A 要点がはっきりしない. B/C/D (sangat jelas/terlalu ringkas/terlalu teknis) berlawanan atau tak sesuai makna."
+  },
+  "5-53": {
+    "alasan": "喚起した = 'membangkitkan (perhatian)', paling dekat D 呼び起こした. A/B/C (menghilangkan/mengabaikan/mengurangi) semua berlawanan arah."
+  },
+  "5-54": {
+    "alasan": "難色を示した = 'menunjukkan sikap keberatan', paling dekat C 反対の姿勢を見せた. A(tak peduli)/B(mendukung aktif)/D(setuju) semua berlawanan makna dengan keberatan."
+  },
+  "5-55": {
+    "alasan": "論拠に乏しい = 'argumennya kurang berdasar', paling dekat B 根拠が不十分だ. A(isi kaya)/C(jelas)/D(meyakinkan) semua berlawanan dengan makna kurang berdasar."
+  },
+  "6-56": {
+    "alasan": "見直す = 'meninjau ulang/mengevaluasi kembali' (untuk kebijakan, sistem, rencana). D pas: pemerintah tinjau ulang sistem dari akar. A/B/C memakainya untuk bintang/produk/gejala pasien — bukan kolokasi alami untuk 見直す."
+  },
+  "6-57": {
+    "alasan": "踏まえる = 'berdasarkan/mempertimbangkan' (pendapat/fakta sebagai dasar tindakan). C pas: kebijakan direvisi berdasarkan pendapat ahli. A/B/D memakainya di konteks aneh — bukan kolokasi alami."
+  },
+  "6-58": {
+    "alasan": "見送る = 'menunda/membatalkan (rencana)'. B pas: rencana tahun ini ditunda karena kekurangan anggaran. A/C/D memakainya untuk 'melepas kepergian orang' (makna berbeda) atau salah konteks."
+  },
+  "6-59": {
+    "alasan": "行き渡る = 'tersebar merata/menjangkau semua' (info, barang, bantuan). A pas: informasi baru butuh waktu menjangkau seluruh daerah. B/C/D memakainya untuk jalan kaki/barang terkirim/lulus ujian — bukan kolokasi alami."
+  },
+  "6-60": {
+    "alasan": "見込む = 'memperkirakan/mengharapkan (angka, hasil)' — biasa untuk proyeksi bisnis. D pas: tahun ini diperkirakan penjualan lebih tinggi. A/B/C memakainya untuk cuaca/produk baru/kondisi pasien — bukan kolokasi alami."
+  },
+  "7-61": {
+    "alasan": "に従って = 'sesuai dengan/mengikuti' (instruksi/perintah). Pas untuk 'minum obat sesuai petunjuk dokter'. に応じて(tergantung pada)/に沿って(sejalan dengan)/をもとに(berdasarkan) kurang pas untuk konteks kepatuhan pada instruksi langsung."
+  },
+  "7-62": {
+    "alasan": "に伴い = 'seiring dengan/bersamaan dengan' (perubahan). Pas untuk 'seiring pemulihan ekonomi, lapangan kerja membaik'. につれ mirip tapi lebih ke perubahan bertahap linear, とともに lebih ke 'bersamaan', に応じて (tergantung) tidak pas nuansa 'seiring'."
+  },
+  "7-63": {
+    "alasan": "に応じて = 'sesuai/tergantung pada' (kebutuhan yang bervariasi). Pas untuk 'sistem harus fleksibel disesuaikan dengan kebutuhan pengguna'. に沿って/をふまえて/に従って kurang menangkap nuansa 'fleksibel menyesuaikan' dari に応じて."
+  },
+  "7-64": {
+    "alasan": "にもかかわらず = 'meskipun/walaupun' (ada penentangan tapi tetap lanjut). Pas untuk 'meski ada pendapat menentang, tetap jelaskan pendiriannya'. にかまわず/をよそに/をものともせず mirip tapi tidak seformal & seumum にもかかわらず untuk konteks ini."
+  },
+  "7-65": {
+    "alasan": "をもとに = 'berdasarkan/dengan dasar' (bahan mentah untuk sesuatu). Pas untuk 'laporan dibuat berdasarkan suara dari lapangan'. に基づいて mirip tapi lebih formal-legal, を踏まえて lebih ke 'mempertimbangkan', に即して lebih ke 'sesuai dengan standar' — をもとに paling pas untuk 'bahan dasar pembuatan laporan'."
+  },
+  "7-66": {
+    "alasan": "にもかかわらず = 'meskipun' (fakta bahwa dilarang tapi tetap dilakukan) — kontras kuat. ものの/とはいえ/としても semua bentuk konsesif tapi kurang setegas にもかかわらず untuk 'meski jelas dilarang, tetap saja...'"
+  },
+  "7-67": {
+    "alasan": "分かれて (意見が分かれる) = idiom baku 'pendapat terpecah/terbagi'. 対立して(berkonflik)/食い違って(bertentangan)/割れて(pecah, agak informal) — 分かれる adalah kolokasi paling standar dengan 意見."
+  },
+  "7-68": {
+    "alasan": "に反して = 'bertentangan dengan/melawan' (instruksi). Pas untuk 'bertentangan dengan perintah atasan, ia jalan dengan caranya sendiri'. をものともせず/をよそに/にかかわらず kurang pas nuansa 'melawan langsung suatu perintah'."
+  },
+  "7-69": {
+    "alasan": "賜物 (tamamono) = 'buah/hasil (dari kerja keras)' — idiom '努力の賜物' sangat baku untuk 'buah dari usaha'. 成果/結晶/産物 semua berarti 'hasil' juga tapi 賜物 adalah pasangan idiomatik paling umum dengan 努力."
+  },
+  "7-70": {
+    "alasan": "にもかかわらず = 'meskipun' (sibuk tapi tetap aktif ikut kegiatan). をものともせず/の中でも/をおして mirip tapi にもかかわらず paling natural untuk kontras 'sibuk TAPI tetap berpartisipasi aktif'."
+  },
+  "7-71": {
+    "alasan": "ものと (期待されている) = pola baku 'ものと期待される' = 'diharapkan akan...'. ことと/かのように/べく tidak membentuk pola idiomatik ini dengan 期待されている."
+  },
+  "7-72": {
+    "alasan": "をものともせず = 'tanpa gentar oleh/tak peduli akan' (rintangan) — nuansa lebih kuat dari sekadar 'meskipun', menekankan keberanian menghadapi kesulitan. の中でも/をよそに/にもかかわらず kurang menangkap nuansa 'gigih menghadapi meski situasi buruk' seperti をものともせず."
+  },
+  "7-73": {
+    "alasan": "きっかけと (なった) = pola baku 'きっかけとなる' = 'menjadi pemicu/awal mula'. きっかけに (tanpa と) tidak gramatikal dipasangkan langsung dengan なった di sini; 契機に/契機と juga mirip tapi kurang umum dibanding きっかけと untuk gaya bahasa ini."
+  },
+  "7-74": {
+    "alasan": "をふまえ = 'berdasarkan/mempertimbangkan' (hasil analisis sebagai dasar tindak lanjut). にもとづき/からして/からすると mirip tapi をふまえ paling pas untuk 'mempertimbangkan hasil analisis untuk langkah berikutnya'."
+  },
+  "7-75": {
+    "alasan": "に (期待に応える) = partikel baku dalam idiom '期待に応える' = 'menjawab/memenuhi harapan'. へ/で/を tidak membentuk idiom ini secara gramatikal."
+  },
+  "7-76": {
+    "alasan": "にくわえ = 'ditambah lagi/selain itu' — pas untuk 'selain penurunan angka kelahiran, penurunan populasi juga makin parah' (dua faktor berbeda ditambahkan). にとどまらず/のみならず/はもとより semua bermakna mirip tapi にくわえ paling pas untuk menambahkan faktor kedua yang terpisah."
+  },
+  "7-77": {
+    "alasan": "ながらも = 'meski/walaupun' (konsesif ringan, kontras internal). Pas untuk 'meski kurang pengalaman, tetap selesai berkat dukungan sekitar'. とはいえ/であっても/といえども lebih formal/kuat, kurang natural untuk kalimat naratif santai ini."
+  },
+  "7-78": {
+    "alasan": "重視して (安全性を重視して設計) = 'dengan mengutamakan (keamanan)'. 考慮して(mempertimbangkan)/ふまえて(berdasarkan)/もとに(berdasarkan) lebih lemah nuansanya dibanding 重視して yang menekankan prioritas utama."
+  },
+  "7-79": {
+    "alasan": "のみならず = 'bukan hanya...tapi juga...' — pas untuk 'bukan cuma pengurangan biaya, tapi juga peningkatan kualitas'. にとどまらず/にくわえ/はもとより mirip tapi のみならず paling standar untuk pola 'bukan hanya X tapi juga Y'."
+  },
+  "7-80": {
+    "alasan": "うけて (結果をうけて) = 'menanggapi/berdasarkan (hasil sebagai pemicu tindakan)'. かんがみて/もとに/ふまえて mirip tapi うけて paling pas untuk nuansa 'hasil ini MEMICU revisi rencana tahun depan'."
+  },
+  "8-81": {
+    "alasan": "Urutan lengkap yang benar: A→D→B→C → \"この政策は 財源の 確保に 目処が立たず 反対も強く 導入が見送られた。\". Fragmen yang tepat mengisi posisi ★ adalah D '確保に'."
+  },
+  "8-82": {
+    "alasan": "Urutan lengkap yang benar: D→A→B→C → \"この報告書は 複数の 専門家の 見解を 踏まえて まとめられている。\". Fragmen yang tepat mengisi posisi ★ adalah A '専門家の'."
+  },
+  "8-83": {
+    "alasan": "Urutan lengkap yang benar: D→A→C→B → \"地域住民は 見直し 計画の 内容について 詳細な 説明会の開催を求めた。\". Fragmen yang tepat mengisi posisi ★ adalah A '計画の'."
+  },
+  "8-84": {
+    "alasan": "Urutan lengkap yang benar: D→A→B→C → \"この制度は すでに10年以上 当初の 目的とは 異なる形で 運用されている。\". Fragmen yang tepat mengisi posisi ★ adalah A '当初の'."
+  },
+  "8-85": {
+    "alasan": "Urutan lengkap yang benar: A→B→C→D → \"この技術は 有望視されて いるものの まだ 研究段階で 実用化には至っていない。\". Fragmen yang tepat mengisi posisi ★ adalah B 'いるものの'."
+  },
+  "9-86": {
+    "alasan": "参加する (bentuk dasar) = pas untuk 'orang yang berpartisipasi secara rutin dalam kegiatan daerah'. しうる/し得る (bisa berpartisipasi) menekankan kemungkinan, しがちな (cenderung) beda nuansa — konteksnya cuma deskripsi netral orang yang berpartisipasi, bukan soal kemungkinan/kecenderungan."
+  },
+  "9-87": {
+    "alasan": "注目されているのが = pola 'yang sedang disorot adalah...' pas sebagai pembuka kalimat yang lanjut menjelaskan topik. A/B/D beda nuansa gramatikal (べきなのが=seharusnya disorot, されているのは=partikel は kurang pas untuk pola ini, されるべきは=seharusnya disorot) — C paling natural mengalir ke kalimat berikutnya."
+  },
+  "9-88": {
+    "alasan": "実施されている = 'sedang dilaksanakan' — pas untuk program kerja sama yang sudah berjalan nyata (bukan cuma diusulkan/dipertimbangkan/diharapkan). A(diusulkan)/C(dipertimbangkan)/D(diharapkan) semua tahap sebelum pelaksanaan, kurang pas dengan konteks yang menyebutkan contoh program konkret."
+  },
+  "9-89": {
+    "alasan": "なっている = 'menjadi' — pas untuk 'menjadi kesempatan menemukan makna hidup baru' (perubahan keadaan alami). されている/している/させている bentuk pasif/aktif/kausatif yang tidak pas gramatikal dengan konteks 'menjadi kesempatan'."
+  },
+  "9-90": {
+    "alasan": "解決する = 'terselesaikan' — pas untuk 'bukan berarti SEMUA masalah daerah langsung terselesaikan'. 解消する/解決できる/解消できる semua mirip tapi 解決する paling natural dipasangkan dengan 'すべて' + konteks negasi di kalimat ini."
+  },
+  "10-91": {
+    "alasan": "Inti email: Tanaka minta jadwal meeting DIPUTUSKAN minggu ini juga (C). A/B/D tidak sesuai — email tidak bilang minggu depan susah, tidak maksa hari Selasa, dan tidak minta batalkan proyek."
+  },
+  "10-92": {
+    "alasan": "Pengumuman jelas: selama pengecekan, tekanan air bisa turun TAPI air tidak akan mati total (B). A/C/D salah — bukan ditunda, bukan mati total, bukan perlu daftar dulu."
+  },
+  "10-93": {
+    "alasan": "Statistik: banyak anak muda usia 20-an pindah dari daerah ke kota karena kerja/kuliah (A). B/C/D berlawanan atau tak didukung data — bukan migrasi sebaliknya, bukan populasi nasional turun, bukan lapangan kerja daerah lebih baik."
+  },
+  "10-94": {
+    "alasan": "Penulis blog rasakan CAMPURAN: sedih lihat toko lama tutup, TAPI juga senang lihat toko baru bermunculan (D). A/B/C terlalu satu sisi — penulis tidak sepenuhnya pesimis atau hanya suka satu jenis toko."
+  },
+  "10-95": {
+    "alasan": "Iklan menonjolkan sesi singkat 25 menit yang fleksibel di sela waktu (C). A/B/D tidak sesuai — bukan soal kelas grup, jumlah guru, atau harga murah (yang ditekankan cuma trial gratis, bukan harga rutin)."
+  },
+  "10-96": {
+    "alasan": "Penulis surat pembaca simpulkan: niat baik penting, tapi menghormati keinginan orang lain juga sama pentingnya (B). A/C/D terlalu ekstrem — bukan bilang lansia tak butuh bantuan atau harus selalu dikasih kursi."
+  },
+  "11-97": {
+    "alasan": "Teks jelas sebut DUA sebab: kebiasaan buang makanan konsumen DAN kebiasaan bisnis pemasok (A). B/C/D tidak disebut dalam teks sebagai sebab utama."
+  },
+  "11-98": {
+    "alasan": "'Aturan 1/3' dijelaskan sebagai batas: kalau sudah lewat 1/3 masa dari produksi ke kedaluwarsa, barang tak bisa dikirim ke toko lagi (D). A/B/C salah menggambarkan definisi aturan ini."
+  },
+  "11-99": {
+    "alasan": "Penulis tekankan solusi butuh KEDUA pihak — termasuk kesadaran individu konsumen, bukan cuma regulasi/bisnis sendirian (C). A/D terlalu sepihak, B salah karena masalah belum selesai."
+  },
+  "11-100": {
+    "alasan": "Penulis simpulkan: soal kapan kasih HP ke anak TIDAK ADA jawaban tunggal yang benar untuk semua keluarga (B). A/C/D terlalu kaku/ekstrem, tidak sesuai sikap penulis yang menekankan keberagaman situasi keluarga."
+  },
+  "11-101": {
+    "alasan": "Penulis anggap penting: aturan pemakaian dibuat & dijalankan lewat DIALOG orang tua-anak, bukan sepihak (A). B/C/D terlalu ekstrem atau berlawanan dengan pendekatan dialogis yang disarankan penulis."
+  },
+  "11-102": {
+    "alasan": "Penulis: aturan yang dipaksakan sepihak berisiko bikin anak diam-diam pakai HP sembunyi-sembunyi (D). A/B/C berlawanan — penulis justru kritik cara memaksakan aturan sepihak."
+  },
+  "12-103": {
+    "alasan": "A (perusahaan) positif soal 4 hari kerja, B (ahli) tidak menolak total tapi ingatkan risiko kalau cara penerapannya salah (C). A/B/D salah menggambarkan sikap masing-masing pihak — B tidak menolak sepenuhnya, cuma kasih syarat."
+  },
+  "12-104": {
+    "alasan": "B khawatir: kalau beban kerja tak dikurangi, cuma hari liburnya nambah — orang jadi kerja lebih padat / masih dihubungi pas libur (B). A/C/D terlalu pasti/ekstrem dibanding kekhawatiran kondisional yang B sampaikan."
+  },
+  "12-105": {
+    "alasan": "Kedua teks sama-sama sepakat: HASIL kebijakan 4 hari kerja tergantung BAGAIMANA cara penerapannya, bukan soal kebijakannya sendiri baik/buruk (A). B/C/D tidak mencerminkan titik temu keduanya."
+  },
+  "13-106": {
+    "alasan": "'Zaman tanpa jawaban pasti' = zaman di mana cara lama (kejar satu jawaban benar) sudah tak cukup menghadapi masalah (D). A/B/C berlawanan atau tak sesuai dengan definisi penulis."
+  },
+  "13-107": {
+    "alasan": "Penulis: pengetahuan dasar justru makin penting di zaman yang berubah cepat, bukan makin tak penting (C). A/B/D berlawanan dengan pandangan penulis yang menghargai pentingnya dasar."
+  },
+  "13-108": {
+    "alasan": "Penulis: pembelajaran eksploratif (tanken gakushuu) tidak otomatis berhasil kalau cuma diterapkan formalitas tanpa perubahan cara mengajar (B). A/C/D terlalu ekstrem, tidak sesuai sikap hati-hati penulis."
+  },
+  "13-109": {
+    "alasan": "Penulis minta guru beralih dari 'memberi jawaban' jadi 'memancing siswa berpikir sendiri' (A). B/C/D berlawanan arah dengan transformasi peran yang diminta penulis."
+  },
+  "13-110": {
+    "alasan": "Pesan inti: pendidikan perlu diarahkan untuk melatih kemampuan terus bergulat dengan pertanyaan tanpa jawaban pasti (D). A/B/C berlawanan dengan sikap reformis penulis di seluruh teks."
+  },
+  "14-111": {
+    "alasan": "Anak Sato demam & butuh dititip HARI INI juga tapi belum ada surat dokter — sesuai catatan layanan, kalau demam mendadak boleh telepon dulu ke Ruang Perawatan Anak Sakit tanpa syarat surat dokter di muka (C). Opsi lain tidak sesuai syarat mendesak/dokumen yang belum lengkap."
+  },
+  "14-112": {
+    "alasan": "Daftar layanan jelas sebut loket konsultasi pengasuhan anak GRATIS dan bisa telepon/datang TANPA perlu janji dulu (B). A/C/D salah baca detail tabel — bukan semua gratis, ada batas pemakaian utk sebagian layanan, dan penitipan sementara tidak untuk anak SD."
+  }
+}
