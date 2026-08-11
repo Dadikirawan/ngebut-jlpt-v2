@@ -129,6 +129,10 @@ function Sidebar({ currentRoute, onNavigate, onFocusBrowseTypes, userStats, isOp
           </div>
         )}
       </div>
+
+      <footer className={styles.sidebarFooter}>
+        © 2026 Dadik Irawan. All rights reserved.
+      </footer>
     </aside>
   )
 }
