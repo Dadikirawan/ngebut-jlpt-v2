@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback } from 'react'
 import './App.css'
 import Layout from './components/shell/Layout.jsx'
 import Dashboard from './pages/dashboard/Dashboard.jsx'
+import Quiz from './pages/quiz/Quiz.jsx'
 import TryOut from './pages/tryout/TryOut.jsx'
 import Results from './pages/results/Results.jsx'
 import Progress from './pages/progress/Progress.jsx'
@@ -48,7 +49,7 @@ function App() {
   }, [lastResult])
 
   const handleNavigate = useCallback((targetRoute) => {
-    if (!['dashboard', 'tryout', 'results', 'progress'].includes(targetRoute)) {
+    if (!['dashboard', 'quiz', 'tryout', 'results', 'progress'].includes(targetRoute)) {
       setRoute('dashboard')
       return
     }
@@ -79,6 +80,21 @@ function App() {
             setRoute('tryout')
           }}
           userStats={userStats}
+        />
+      )}
+      {route === 'quiz' && (
+        <Quiz
+          selectedLevel={selectedLevel}
+          onSelectLevel={(lvl) => setSelectedLevel(lvl)}
+          onStartType={(lvl, type) => {
+            const safeLevel = lvl && (lvl === 'N1' || lvl === 'N2') ? lvl : selectedLevel
+            setTryoutConfig({ level: safeLevel, mode: 'type', problemType: type, problemNumber: null, count: 999 })
+            setRoute('tryout')
+          }}
+          onOpenProblem={(pnum) => {
+            setTryoutConfig({ level: selectedLevel, mode: 'problem', problemType: null, problemNumber: pnum, count: 999 })
+            setRoute('tryout')
+          }}
         />
       )}
       {route === 'tryout' && (

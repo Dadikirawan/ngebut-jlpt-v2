@@ -4,6 +4,7 @@ import styles from './shell.module.css'
 const NAV_ITEMS = [
   { id: 'dashboard', label: 'Home', icon: '🏠' },
   { id: 'vocab', label: 'Vocab', icon: '📚', disabled: true, badge: 'Coming soon' },
+  { id: 'quiz', label: 'Quiz', icon: '🧩' },
   { id: 'tryout', label: 'Try-out', icon: '📝' },
   { id: 'progress', label: 'Progress', icon: '📊' },
 ]
@@ -32,11 +33,6 @@ function Sidebar({ currentRoute, onNavigate, userStats, isOpen, onCloseNav }) {
       return
     }
     safeOnNavigate(itemId)
-    if (onCloseNav) onCloseNav()
-  }
-
-  const handleQuickAction = (route) => {
-    safeOnNavigate(route)
     if (onCloseNav) onCloseNav()
   }
 
@@ -78,36 +74,6 @@ function Sidebar({ currentRoute, onNavigate, userStats, isOpen, onCloseNav }) {
             )
           })}
         </ul>
-      </div>
-
-      <div>
-        <div className={styles.navGroup}>Aksi Cepat</div>
-
-        <div
-          className={styles.quickActionCard}
-          onClick={() => handleQuickAction('tryout')}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') handleQuickAction('tryout')
-          }}
-        >
-          <div className={styles.quickActionTitle}>Mulai Try-out Baru</div>
-          <div className={styles.quickActionSub}>Soal format JLPT resmi.</div>
-        </div>
-
-        <div
-          className={styles.quickActionCard}
-          onClick={() => handleQuickAction('progress')}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') handleQuickAction('progress')
-          }}
-        >
-          <div className={styles.quickActionTitle}>Lihat Pembahasan Terakhir</div>
-          <div className={styles.quickActionSub}>Review jawabanmu.</div>
-        </div>
 
         {vocabToast && (
           <div className={styles.toastNotice} role="status" aria-live="polite">
