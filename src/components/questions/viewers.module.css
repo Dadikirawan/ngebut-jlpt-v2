@@ -46,6 +46,13 @@
   min-width: 0;
 }
 
+.underlineTarget {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  font-weight: 600;
+}
+
 .promptTemplate {
   font-size: 19px;
   color: var(--text-h);

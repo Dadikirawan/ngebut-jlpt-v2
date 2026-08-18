@@ -16,7 +16,8 @@
             "C": "せつべん",
             "D": "せつめい"
           },
-          "answer": "D"
+          "answer": "D",
+          "underline_target": "説明"
         },
         {
           "number": 2,
@@ -27,7 +28,8 @@
             "C": "じんこう",
             "D": "にんこう"
           },
-          "answer": "C"
+          "answer": "C",
+          "underline_target": "人口"
         },
         {
           "number": 3,
@@ -38,7 +40,8 @@
             "C": "しごん",
             "D": "じげん"
           },
-          "answer": "B"
+          "answer": "B",
+          "underline_target": "資源"
         },
         {
           "number": 4,
@@ -49,7 +52,8 @@
             "C": "ぜせえ",
             "D": "こせい"
           },
-          "answer": "A"
+          "answer": "A",
+          "underline_target": "是正"
         },
         {
           "number": 5,
@@ -60,7 +64,8 @@
             "C": "はつぎ",
             "D": "はっき"
           },
-          "answer": "D"
+          "answer": "D",
+          "underline_target": "発揮"
         },
         {
           "number": 6,
@@ -71,7 +76,8 @@
             "C": "ずいじ",
             "D": "づいじ"
           },
-          "answer": "C"
+          "answer": "C",
+          "underline_target": "随時"
         },
         {
           "number": 7,
@@ -82,7 +88,8 @@
             "C": "どうにゅ",
             "D": "とうにゅう"
           },
-          "answer": "B"
+          "answer": "B",
+          "underline_target": "導入"
         },
         {
           "number": 8,
@@ -93,7 +100,8 @@
             "C": "げんあん",
             "D": "けんなん"
           },
-          "answer": "A"
+          "answer": "A",
+          "underline_target": "懸案"
         },
         {
           "number": 9,
@@ -104,7 +112,8 @@
             "C": "しん ぢゅう",
             "D": "しんちょう"
           },
-          "answer": "D"
+          "answer": "D",
+          "underline_target": "慎重"
         },
         {
           "number": 10,
@@ -115,7 +124,8 @@
             "C": "ふくま れて",
             "D": "こくまれて"
           },
-          "answer": "C"
+          "answer": "C",
+          "underline_target": "含まれて"
         },
         {
           "number": 11,
@@ -126,7 +136,8 @@
             "C": "かくしゅう",
             "D": "こうじゅう"
           },
-          "answer": "B"
+          "answer": "B",
+          "underline_target": "拡充"
         },
         {
           "number": 12,
@@ -137,7 +148,8 @@
             "C": "しぎょう",
             "D": "せぎょう"
           },
-          "answer": "A"
+          "answer": "A",
+          "underline_target": "施行"
         },
         {
           "number": 13,
@@ -148,7 +160,8 @@
             "C": "てきう",
             "D": "ま と"
           },
-          "answer": "D"
+          "answer": "D",
+          "underline_target": "的"
         },
         {
           "number": 14,
@@ -159,7 +172,8 @@
             "C": "しょうにん",
             "D": "じょうにん"
           },
-          "answer": "C"
+          "answer": "C",
+          "underline_target": "承認"
         },
         {
           "number": 15,
@@ -170,7 +184,8 @@
             "C": "ぞう たい",
             "D": "じょうだい"
           },
-          "answer": "B"
+          "answer": "B",
+          "underline_target": "増大"
         }
       ]
     },
@@ -698,7 +713,7 @@
             "A": "彼は毎朝、天気を見込んで出かける。",
             "B": "その企業は新製品を見込んで 開発した。",
             "C": "医師は患者の体調を見込んで診察した。",
-            "D": "今年度は前年度を上回る売上 を見込んでいる。 【文法】"
+            "D": "今年度は前年度を上回る売上 を見込んでいる。"
           },
           "answer": "D"
         }
@@ -1050,7 +1065,7 @@
             "A": "解消する",
             "B": "解決できる",
             "C": "解消できる",
-            "D": "解決する 【読解】"
+            "D": "解決する"
           },
           "answer": "D"
         }

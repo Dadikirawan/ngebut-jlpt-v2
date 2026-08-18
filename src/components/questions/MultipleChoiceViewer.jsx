@@ -25,6 +25,29 @@ function getOptionCardClass(letter, selectedAnswer, showCorrect, answer, disable
   return classes.join(' ')
 }
 
+function renderPrompt(prompt, underlineTarget) {
+  if (!underlineTarget) {
+    return prompt
+  }
+
+  const index = prompt.indexOf(underlineTarget)
+  if (index === -1) {
+    return prompt
+  }
+
+  const before = prompt.slice(0, index)
+  const target = prompt.slice(index, index + underlineTarget.length)
+  const after = prompt.slice(index + underlineTarget.length)
+
+  return (
+    <>
+      {before}
+      <u className={styles.underlineTarget}>{target}</u>
+      {after}
+    </>
+  )
+}
+
 export default function MultipleChoiceViewer({
   question,
   selectedAnswer,
@@ -42,7 +65,9 @@ export default function MultipleChoiceViewer({
         <span className={styles.pillType}>4択</span>
       </div>
 
-      <div className={styles.promptText}>{question.prompt}</div>
+      <div className={styles.promptText}>
+        {renderPrompt(question.prompt, question.underline_target)}
+      </div>
 
       <ul className={styles.optionsList}>
         {LETTERS.map((letter) => {
