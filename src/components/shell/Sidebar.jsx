@@ -4,23 +4,20 @@ import styles from './shell.module.css'
 const NAV_ITEMS = [
   { id: 'dashboard', label: 'Home', icon: '🏠' },
   { id: 'vocab', label: 'Vocab', icon: '📚', disabled: true, badge: 'Coming soon' },
-  { id: 'quiz', label: 'Quiz', icon: '🧩' },
   { id: 'tryout', label: 'Try-out', icon: '📝' },
   { id: 'progress', label: 'Progress', icon: '📊' },
 ]
 
 const mapRouteToActive = (route) => {
   if (route === 'home') return 'dashboard'
-  if (route === 'quiz') return 'dashboard'
   return route
 }
 
-function Sidebar({ currentRoute, onNavigate, onFocusBrowseTypes, userStats, isOpen, onCloseNav }) {
+function Sidebar({ currentRoute, onNavigate, userStats, isOpen, onCloseNav }) {
   void userStats
   const activeId = mapRouteToActive(currentRoute)
   const [vocabToast, setVocabToast] = useState(false)
   const safeOnNavigate = typeof onNavigate === 'function' ? onNavigate : () => {}
-  const safeOnFocusBrowseTypes = typeof onFocusBrowseTypes === 'function' ? onFocusBrowseTypes : null
 
   const showVocabNotice = useCallback(() => {
     setVocabToast(true)
@@ -31,15 +28,6 @@ function Sidebar({ currentRoute, onNavigate, onFocusBrowseTypes, userStats, isOp
   const handleNavClick = (itemId) => {
     if (itemId === 'vocab') {
       showVocabNotice()
-      if (onCloseNav) onCloseNav()
-      return
-    }
-    if (itemId === 'quiz') {
-      if (safeOnFocusBrowseTypes) {
-        safeOnFocusBrowseTypes()
-      } else {
-        safeOnNavigate('dashboard')
-      }
       if (onCloseNav) onCloseNav()
       return
     }

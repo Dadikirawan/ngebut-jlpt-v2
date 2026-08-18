@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect } from 'react'
+import { useRef, useCallback } from 'react'
 import styles from './dashboard.module.css'
 import HeroSection from './HeroSection.jsx'
 import LearnerProfileCard from './LearnerProfileCard.jsx'
@@ -12,8 +12,6 @@ export default function Dashboard({
   onStartQuick,
   onStartType,
   onOpenProblem,
-  initialBrowseFocus,
-  onBrowseFocused,
   userStats,
 }) {
   const safeStats = userStats || {}
@@ -30,28 +28,6 @@ export default function Dashboard({
       problemListRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }, [])
-
-  useEffect(() => {
-    if (!initialBrowseFocus) return undefined
-    const safeReset = typeof onBrowseFocused === 'function' ? onBrowseFocused : () => {}
-    let raf1 = 0
-    let raf2 = 0
-    let timer = 0
-    const fire = () => {
-      handleBrowseTypes()
-      safeReset()
-    }
-    raf1 = window.requestAnimationFrame(() => {
-      raf2 = window.requestAnimationFrame(() => {
-        timer = window.setTimeout(fire, 60)
-      })
-    })
-    return () => {
-      if (raf1) window.cancelAnimationFrame(raf1)
-      if (raf2) window.cancelAnimationFrame(raf2)
-      if (timer) window.clearTimeout(timer)
-    }
-  }, [initialBrowseFocus, handleBrowseTypes, onBrowseFocused])
 
   return (
     <main className={styles.dashboardContainer}>

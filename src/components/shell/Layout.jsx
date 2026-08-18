@@ -3,7 +3,7 @@ import Sidebar from './Sidebar'
 import Header from './Header'
 import styles from './shell.module.css'
 
-function Layout({ children, currentRoute, onNavigate, onFocusBrowseTypes, userStats }) {
+function Layout({ children, currentRoute, onNavigate, userStats }) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   const handleToggleNav = () => {
@@ -27,7 +27,6 @@ function Layout({ children, currentRoute, onNavigate, onFocusBrowseTypes, userSt
       <Sidebar
         currentRoute={currentRoute}
         onNavigate={onNavigate}
-        onFocusBrowseTypes={onFocusBrowseTypes}
         userStats={userStats}
         isOpen={mobileNavOpen}
         onCloseNav={handleCloseNav}

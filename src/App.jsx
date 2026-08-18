@@ -18,7 +18,6 @@ function App() {
     count: 20,
   })
   const [lastResult, setLastResult] = useState(null)
-  const [dashboardFocusBrowse, setDashboardFocusBrowse] = useState(false)
 
   const userStats = useMemo(() => {
     const agg = getAggregateAllLevels()
@@ -56,20 +55,10 @@ function App() {
     setRoute(targetRoute)
   }, [])
 
-  const handleFocusBrowseTypes = useCallback(() => {
-    setDashboardFocusBrowse(true)
-    setRoute('dashboard')
-  }, [])
-
-  const handleResetBrowseFocus = useCallback(() => {
-    setDashboardFocusBrowse(false)
-  }, [])
-
   return (
     <Layout
       currentRoute={route}
       onNavigate={handleNavigate}
-      onFocusBrowseTypes={handleFocusBrowseTypes}
       userStats={userStats}
     >
       {route === 'dashboard' && (
@@ -89,8 +78,6 @@ function App() {
             setTryoutConfig({ level: selectedLevel, mode: 'problem', problemType: null, problemNumber: pnum, count: 999 })
             setRoute('tryout')
           }}
-          initialBrowseFocus={dashboardFocusBrowse}
-          onBrowseFocused={handleResetBrowseFocus}
           userStats={userStats}
         />
       )}

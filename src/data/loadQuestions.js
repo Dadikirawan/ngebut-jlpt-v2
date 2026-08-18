@@ -51,6 +51,7 @@ function _pickQuestionFields(q, base) {
     ...base,
     question_number: q.number,
     prompt: q.prompt,
+    underline_target: q.underline_target || null,
     options: q.options ? { ...q.options } : undefined,
     answer: q.answer,
   }
