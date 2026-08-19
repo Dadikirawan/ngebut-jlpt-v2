@@ -150,7 +150,8 @@ function getFlattenedCached(level) {
 
 export function getQuestionsByLevel(level) {
   _validateLevel(level)
-  return getFlattenedCached(level).map((q) => ({ ...q }))
+  const copy = getFlattenedCached(level).map((q) => ({ ...q }))
+  return _shuffleInPlace(copy)
 }
 
 export function getQuestionsByProblemType(level, type) {
@@ -158,7 +159,25 @@ export function getQuestionsByProblemType(level, type) {
   _validateType(type)
   const all = getFlattenedCached(level)
   const filtered = type ? all.filter((q) => q.problem_type === type) : all
-  return filtered.map((q) => ({ ...q }))
+  const copy = filtered.map((q) => ({ ...q }))
+  return _shuffleInPlace(copy)
+}
+
+export function getQuestionsByProblem(level, problemNumber) {
+  _validateLevel(level)
+  const all = getFlattenedCached(level)
+  const pNum =
+    typeof problemNumber === 'string'
+      ? parseInt(problemNumber.replace(/^P/i, ''), 10)
+      : Number(problemNumber)
+  const filtered = Number.isFinite(pNum) && pNum > 0
+    ? all.filter((q) => Number(q.problem_number) === pNum)
+    : []
+  const base = filtered.length > 0
+    ? filtered
+    : all.filter((q) => q.problem_type === 'vocab_grammar_choice').slice(0, 10)
+  const copy = base.map((q) => ({ ...q }))
+  return _shuffleInPlace(copy)
 }
 
 function _shuffleInPlace(arr, rng = Math.random) {

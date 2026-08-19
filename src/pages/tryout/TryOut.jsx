@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import styles from './tryout.module.css'
-import { getRandomQuizSet, getQuestionsByProblemType, getQuestionsByLevel } from '../../data/loadQuestions.js'
+import { getRandomQuizSet, getQuestionsByProblemType, getQuestionsByLevel, getQuestionsByProblem } from '../../data/loadQuestions.js'
 import MultipleChoiceViewer from '../../components/questions/MultipleChoiceViewer.jsx'
 import SentenceOrderViewer from '../../components/questions/SentenceOrderViewer.jsx'
 import ClozePassageViewer from '../../components/questions/ClozePassageViewer.jsx'
@@ -32,31 +32,24 @@ function _getQuestionsFor(level, mode, problemNumber, problemType, count) {
     }
   }
   if (mode === 'problem') {
-    const all = getQuestionsByLevel(level)
-    const pNum =
-      typeof problemNumber === 'string'
-        ? parseInt(problemNumber.replace(/^P/i, ''), 10)
-        : Number(problemNumber)
-    const filtered = all.filter((q) => Number(q.problem_number) === pNum)
-    if (filtered.length > 0) return filtered
-    const typeQs = getQuestionsByProblemType(level, 'vocab_grammar_choice')
-    return typeQs.slice(0, 10)
+    return getQuestionsByProblem(level, problemNumber)
   }
   return getRandomQuizSet(level, 20)
 }
 
 export default function TryOut({
-  level = 'N1',
-  mode = 'full',
-  problemNumber = null,
+  level,
+  mode = 'random',
   problemType = null,
+  problemNumber = null,
   count = 20,
+  attemptId = null,
   onNavigate,
   onComplete,
 }) {
   const paramKey = useMemo(
-    () => `${level}-${mode}-${problemType ?? ''}-${problemNumber ?? ''}-${count}`,
-    [level, mode, problemType, problemNumber, count]
+    () => `${level}-${mode}-${problemType ?? ''}-${problemNumber ?? ''}-${count}-${attemptId ?? 'x'}`,
+    [level, mode, problemType, problemNumber, count, attemptId]
   )
 
   const [questions, setQuestions] = useState([])

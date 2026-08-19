@@ -67,16 +67,16 @@ function App() {
           selectedLevel={selectedLevel}
           onSelectLevel={(lvl) => setSelectedLevel(lvl)}
           onStartQuick={() => {
-            setTryoutConfig({ level: selectedLevel, mode: 'random', problemType: null, problemNumber: null, count: 20 })
+            setTryoutConfig({ level: selectedLevel, mode: 'random', problemType: null, problemNumber: null, count: 20, attemptId: Date.now() })
             setRoute('tryout')
           }}
           onStartType={(lvl, type) => {
             const safeLevel = lvl && (lvl === 'N1' || lvl === 'N2') ? lvl : selectedLevel
-            setTryoutConfig({ level: safeLevel, mode: 'type', problemType: type, problemNumber: null, count: 999 })
+            setTryoutConfig({ level: safeLevel, mode: 'type', problemType: type, problemNumber: null, count: 999, attemptId: Date.now() })
             setRoute('tryout')
           }}
           onOpenProblem={(pnum) => {
-            setTryoutConfig({ level: selectedLevel, mode: 'problem', problemType: null, problemNumber: pnum, count: 999 })
+            setTryoutConfig({ level: selectedLevel, mode: 'problem', problemType: null, problemNumber: pnum, count: 999, attemptId: Date.now() })
             setRoute('tryout')
           }}
           userStats={userStats}
@@ -88,11 +88,11 @@ function App() {
           onSelectLevel={(lvl) => setSelectedLevel(lvl)}
           onStartType={(lvl, type) => {
             const safeLevel = lvl && (lvl === 'N1' || lvl === 'N2') ? lvl : selectedLevel
-            setTryoutConfig({ level: safeLevel, mode: 'type', problemType: type, problemNumber: null, count: 999 })
+            setTryoutConfig({ level: safeLevel, mode: 'type', problemType: type, problemNumber: null, count: 999, attemptId: Date.now() })
             setRoute('tryout')
           }}
           onOpenProblem={(pnum) => {
-            setTryoutConfig({ level: selectedLevel, mode: 'problem', problemType: null, problemNumber: pnum, count: 999 })
+            setTryoutConfig({ level: selectedLevel, mode: 'problem', problemType: null, problemNumber: pnum, count: 999, attemptId: Date.now() })
             setRoute('tryout')
           }}
         />
@@ -104,6 +104,7 @@ function App() {
           problemType={tryoutConfig.problemType || null}
           problemNumber={tryoutConfig.problemNumber}
           count={tryoutConfig.count}
+          attemptId={tryoutConfig.attemptId || null}
           onNavigate={handleNavigate}
           onComplete={(result) => {
             setLastResult(result)
@@ -118,7 +119,7 @@ function App() {
           onNavigate={handleNavigate}
           onRetry={() => {
             const lvl = lastResult?.level || selectedLevel
-            setTryoutConfig({ level: lvl, mode: 'random', problemNumber: null, count: 20 })
+            setTryoutConfig({ level: lvl, mode: 'random', problemType: null, problemNumber: null, count: 20, attemptId: Date.now() })
             setRoute('tryout')
           }}
         />
