@@ -59,7 +59,7 @@ export default function MultipleChoiceViewer({
   const qn = question.question_number ?? ''
 
   return (
-    <div className={styles.viewerContainer}>
+    <div className={styles.viewerContainer} translate="no">
       <div className={styles.topBar}>
         <span className={styles.badgeQuestion}>問題 {qn}</span>
         <span className={styles.pillType}>4択</span>

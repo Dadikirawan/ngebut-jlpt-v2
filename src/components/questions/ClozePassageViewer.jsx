@@ -67,7 +67,7 @@ export default function ClozePassageViewer(props) {
   const handleToggle = () => setIsCollapsed(!isCollapsed)
 
   return (
-    <div className={styles.viewerContainer}>
+    <div className={styles.viewerContainer} translate="no">
       <div className={styles.twoColumnLayout}>
         <div className={styles.passagePanel}>
           <div className={styles.passageHeader}>

@@ -80,7 +80,7 @@ export default function ReadingPassageViewer({
   const qn = question.question_number ?? ''
 
   return (
-    <div className={styles.viewerContainer}>
+    <div className={styles.viewerContainer} translate="no">
       <div className={styles.twoColumnLayout}>
         <div className={styles.passagePanel}>
           <div className={styles.passageHeader}>

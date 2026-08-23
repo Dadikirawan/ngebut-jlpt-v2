@@ -131,7 +131,7 @@ const ProblemTypeList = forwardRef(function ProblemTypeList(
               </span>
               <span className={styles.questionCount}>{group.totalQuestions} soal</span>
             </div>
-            <div className={styles.problemTitleJp}>
+            <div className={styles.problemTitleJp} translate="no">
               {group.problems.map((p) => p.titleJp).filter(Boolean).join(' ・ ')}
             </div>
             <div className={styles.problemTitleId}>

@@ -39,11 +39,11 @@ function Sidebar({ currentRoute, onNavigate, userStats, isOpen, onCloseNav }) {
   return (
     <aside className={`${styles.sidebar} ${isOpen === false ? styles.sidebarHidden : ''}`}>
       <div>
-        <div className={styles.brand}>
+        <div className={styles.brand} translate="no">
           <div className={styles.brandLogo}>NJ</div>
           <span>NgebutJLPT v2</span>
         </div>
-        <p className={styles.tagline}>Try-out Soal JLPT Resmi</p>
+        <p className={styles.tagline} translate="no">Try-out Soal JLPT Resmi</p>
       </div>
 
       <div>

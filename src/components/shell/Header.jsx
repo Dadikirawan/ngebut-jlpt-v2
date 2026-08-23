@@ -14,11 +14,11 @@ function Header({ userStats, onToggleNav }) {
         >
           ☰
         </button>
-        <div className={styles.headerBrand}>
+        <div className={styles.headerBrand} translate="no">
           <div className={styles.headerBrandLogo}>NJ</div>
           <span>NgebutJLPT v2</span>
         </div>
-        <div className={styles.mobileHeaderBrand}>
+        <div className={styles.mobileHeaderBrand} translate="no">
           <div className={styles.mobileHeaderBrandLogo}>NJ</div>
           <span>NgebutJLPT v2</span>
         </div>
