@@ -1,5 +1,7 @@
 import styles from './viewers.module.css'
 import FeedbackExplanation from './FeedbackExplanation.jsx'
+import Furi from './Furi.jsx'
+import { furiSegments, renderSegments, useFuriganaEnabled } from '../../utils/furigana.js'
 
 const LETTERS = ['A', 'B', 'C', 'D']
 
@@ -25,14 +27,29 @@ function getOptionCardClass(letter, selectedAnswer, showCorrect, answer, disable
   return classes.join(' ')
 }
 
-function renderPrompt(prompt, underlineTarget) {
+function renderPrompt(question, enabled) {
+  const prompt = question.prompt
+  const underlineTarget = question.underline_target
+  const segs = furiSegments(question, prompt, enabled)
+
   if (!underlineTarget) {
-    return prompt
+    return segs ? renderSegments(segs) : prompt
   }
 
   const index = prompt.indexOf(underlineTarget)
   if (index === -1) {
-    return prompt
+    return segs ? renderSegments(segs) : prompt
+  }
+
+  if (segs) {
+    const end = index + underlineTarget.length
+    return (
+      <>
+        {renderSegments(segs, 0, index)}
+        <u className={styles.underlineTarget} translate="no">{renderSegments(segs, index, end)}</u>
+        {renderSegments(segs, end)}
+      </>
+    )
   }
 
   const before = prompt.slice(0, index)
@@ -42,7 +59,7 @@ function renderPrompt(prompt, underlineTarget) {
   return (
     <>
       {before}
-      <u className={styles.underlineTarget}>{target}</u>
+      <u className={styles.underlineTarget} translate="no">{target}</u>
       {after}
     </>
   )
@@ -57,16 +74,17 @@ export default function MultipleChoiceViewer({
 }) {
   const options = question.options || {}
   const qn = question.question_number ?? ''
+  const furiEnabled = useFuriganaEnabled()
 
   return (
     <div className={styles.viewerContainer} translate="no">
       <div className={styles.topBar}>
-        <span className={styles.badgeQuestion}>問題 {qn}</span>
-        <span className={styles.pillType}>4択</span>
+        <span className={styles.badgeQuestion} translate="no">問題 {qn}</span>
+        <span className={styles.pillType} translate="no">4択</span>
       </div>
 
-      <div className={styles.promptText}>
-        {renderPrompt(question.prompt, question.underline_target)}
+      <div className={styles.promptText} translate="no">
+        {renderPrompt(question, furiEnabled)}
       </div>
 
       <ul className={styles.optionsList}>
@@ -96,7 +114,9 @@ export default function MultipleChoiceViewer({
                 }}
               >
                 <div className={styles.optionLabelBox}>{letter}</div>
-                <div className={styles.optionText}>{text}</div>
+                <div className={styles.optionText} translate="no">
+                  <Furi question={question} text={text} />
+                </div>
               </div>
             </li>
           )

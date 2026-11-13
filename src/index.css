@@ -98,3 +98,14 @@ button {
 *::after {
   box-sizing: border-box;
 }
+
+/* Furigana (tag <ruby>) */
+ruby {
+  ruby-position: over;
+}
+
+ruby rt {
+  font-size: 0.5em;
+  font-weight: 400;
+  letter-spacing: 0;
+}

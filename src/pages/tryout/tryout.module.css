@@ -628,3 +628,20 @@
     padding: 10px 12px;
   }
 }
+
+.furiToggle {
+  background: transparent;
+  color: var(--navy-ink);
+  border: 1.5px solid var(--navy-ink);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.furiToggleOn {
+  background: var(--navy-ink);
+  color: var(--paper);
+}

@@ -258,3 +258,12 @@ export function _isUsingMemoryFallback() {
   const s = _storage()
   return s === 'MEMORY' || s === 'READ_THROUGH'
 }
+
+// ---- Preferensi sederhana (string) — dipakai mis. toggle Furigana ----
+export function getPref(key) {
+  return _rawGetItem(key)
+}
+
+export function setPref(key, value) {
+  return _rawSetItem(key, value)
+}

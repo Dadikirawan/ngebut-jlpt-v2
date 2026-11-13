@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './viewers.module.css'
 import FeedbackExplanation from './FeedbackExplanation.jsx'
+import Furi from './Furi.jsx'
 
 const LETTERS = ['A', 'B', 'C', 'D']
 
@@ -26,18 +27,20 @@ function getOptionCardClass(letter, selectedAnswer, showCorrect, answer, disable
   return classes.join(' ')
 }
 
-function renderTable(tableData) {
+function renderTable(tableData, question) {
   if (!tableData || !tableData.headers || !tableData.rows) return null
   const { headers, rows } = tableData
   if (headers.length === 0 || rows.length === 0) return null
 
   return (
-    <div className={styles.passageTableCard}>
+    <div className={styles.passageTableCard} translate="no">
       <table className={styles.passageTable}>
         <thead>
           <tr>
             {headers.map((h, i) => (
-              <th key={`th-${i}`}>{h}</th>
+              <th key={`th-${i}`}>
+                <Furi question={question} text={h} />
+              </th>
             ))}
           </tr>
         </thead>
@@ -45,7 +48,9 @@ function renderTable(tableData) {
           {rows.map((row, rIdx) => (
             <tr key={`row-${rIdx}`}>
               {headers.map((h, cIdx) => (
-                <td key={`cell-${rIdx}-${cIdx}`}>{row[h] ?? ''}</td>
+                <td key={`cell-${rIdx}-${cIdx}`}>
+                  <Furi question={question} text={row[h] ?? ''} />
+                </td>
               ))}
             </tr>
           ))}
@@ -55,13 +60,13 @@ function renderTable(tableData) {
   )
 }
 
-function renderFootnotes(footnotes) {
+function renderFootnotes(footnotes, question) {
   if (!footnotes || footnotes.length === 0) return null
   return (
-    <ul className={styles.footnotesList}>
+    <ul className={styles.footnotesList} translate="no">
       {footnotes.map((fn, i) => (
         <li key={`fn-${i}`} className={styles.footnoteItem}>
-          {fn}
+          <Furi question={question} text={fn} />
         </li>
       ))}
     </ul>
@@ -85,7 +90,7 @@ export default function ReadingPassageViewer({
         <div className={styles.passagePanel}>
           <div className={styles.passageHeader}>
             <div className={styles.passageHeaderLeft}>
-              <span className={styles.badgePassageType}>読解</span>
+              <span className={styles.badgePassageType} translate="no">読解</span>
               <span className={styles.passageHeaderTitle}>Bacaan</span>
             </div>
             <button
@@ -100,20 +105,24 @@ export default function ReadingPassageViewer({
 
           <div style={{ display: isCollapsed ? 'none' : 'block' }}>
             <div className={styles.cardBody}>
-              <div className={styles.readingBody}>{question.passage_text}</div>
+              <div className={styles.readingBody} translate="no">
+                <Furi question={question} text={question.passage_text} />
+              </div>
             </div>
 
-            {renderTable(question.table_data)}
-            {renderFootnotes(question.footnotes)}
+            {renderTable(question.table_data, question)}
+            {renderFootnotes(question.footnotes, question)}
           </div>
         </div>
 
         <div className={styles.questionPanel}>
           <div className={styles.topBar}>
-            <span className={styles.badgeQuestion}>質問 {qn}</span>
+            <span className={styles.badgeQuestion} translate="no">質問 {qn}</span>
           </div>
 
-          <div className={styles.readingPrompt}>{question.prompt}</div>
+          <div className={styles.readingPrompt} translate="no">
+            <Furi question={question} text={question.prompt} />
+          </div>
 
           <ul className={styles.optionsList}>
             {LETTERS.map((letter) => {
@@ -142,7 +151,9 @@ export default function ReadingPassageViewer({
                     }}
                   >
                     <div className={styles.optionLabelBox}>{letter}</div>
-                    <div className={styles.optionText}>{text}</div>
+                    <div className={styles.optionText} translate="no">
+                      <Furi question={question} text={text} />
+                    </div>
                   </div>
                 </li>
               )

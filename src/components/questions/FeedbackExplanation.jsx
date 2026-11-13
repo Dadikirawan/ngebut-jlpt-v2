@@ -1,4 +1,5 @@
 import styles from './viewers.module.css'
+import Furi from './Furi.jsx'
 
 export default function FeedbackExplanation({
   question,
@@ -48,7 +49,9 @@ export default function FeedbackExplanation({
           {promptText && (
             <div className={styles.explanationPromptBlock}>
               <span className={styles.explanationPromptLabel}>Soal</span>
-              {promptText}
+              <div translate="no">
+                <Furi question={question} text={promptText} />
+              </div>
             </div>
           )}
 
@@ -60,12 +63,14 @@ export default function FeedbackExplanation({
               </span>
             )}
             {correctText != null && (
-              <span className={styles.explanationCorrectText}>{correctText}</span>
+              <span className={styles.explanationCorrectText} translate="no">
+                <Furi question={question} text={correctText} />
+              </span>
             )}
           </div>
 
           {question.correct_order && (
-            <div style={{ marginTop: 10, fontSize: 13, color: 'var(--success)', fontWeight: 600 }}>
+            <div style={{ marginTop: 10, fontSize: 13, color: 'var(--success)', fontWeight: 600 }} translate="no">
               Urutan kalimat benar: {question.correct_order}
             </div>
           )}
@@ -73,7 +78,9 @@ export default function FeedbackExplanation({
           {question.explanation && (
             <div className={styles.explanationReasonBlock}>
               <span className={styles.explanationReasonLabel}>💡 Alasan</span>
-              <div className={styles.explanationReasonText}>{question.explanation}</div>
+              <div className={styles.explanationReasonText}>
+                <Furi question={question} text={question.explanation} />
+              </div>
             </div>
           )}
         </div>

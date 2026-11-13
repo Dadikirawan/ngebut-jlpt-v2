@@ -5,6 +5,7 @@ import MultipleChoiceViewer from '../../components/questions/MultipleChoiceViewe
 import SentenceOrderViewer from '../../components/questions/SentenceOrderViewer.jsx'
 import ClozePassageViewer from '../../components/questions/ClozePassageViewer.jsx'
 import ReadingPassageViewer from '../../components/questions/ReadingPassageViewer.jsx'
+import { setFuriganaEnabled, useFuriganaEnabled } from '../../utils/furigana.js'
 import { getProblemMeta } from '../../utils/problemMeta.js'
 import { appendHistory } from '../../utils/storage.js'
 
@@ -52,6 +53,7 @@ export default function TryOut({
     [level, mode, problemType, problemNumber, count, attemptId]
   )
 
+  const furiEnabled = useFuriganaEnabled()
   const [questions, setQuestions] = useState([])
   const [currentIdx, setCurrentIdx] = useState(0)
   const [answers, setAnswers] = useState({})
@@ -314,12 +316,22 @@ export default function TryOut({
         <div className={styles.topBarRight}>
           <div className={styles.typePills}>
             {currentProblemMeta && (
-              <span className={styles.pillProblem}>
+              <span className={styles.pillProblem} translate="no">
                 {currentProblemMeta.titleJp || `P${currentQ?.problem_number}`}
               </span>
             )}
-            <span className={styles.pillType}>{currentTypeLabel}</span>
+            <span className={styles.pillType} translate="no">{currentTypeLabel}</span>
           </div>
+          <button
+            type="button"
+            className={`${styles.furiToggle} ${furiEnabled ? styles.furiToggleOn : ''}`}
+            onClick={() => setFuriganaEnabled(!furiEnabled)}
+            aria-pressed={furiEnabled}
+            translate="no"
+            title="Tampilkan / sembunyikan furigana (bacaan di atas kanji)"
+          >
+            Furigana: {furiEnabled ? 'ON' : 'OFF'}
+          </button>
           <button
             type="button"
             className={styles.finishBtn}

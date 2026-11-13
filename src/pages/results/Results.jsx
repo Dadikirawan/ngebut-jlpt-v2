@@ -215,7 +215,7 @@ export default function Results({
                 <div key={type} className={styles.typeStatItem}>
                   <div className={styles.typeStatLabel}>
                     <span className={styles.typeStatIcon}>{meta.icon}</span>
-                    <span>{meta.jp}</span>
+                    <span translate="no">{meta.jp}</span>
                   </div>
                   <span className={styles.typeStatRatio}>
                     {bd.correct}/{bd.total}
@@ -245,7 +245,7 @@ export default function Results({
             return (
               <div key={type} className={styles.typeSummaryCard}>
                 <div className={headerClass}>
-                  <div className={styles.typeCardLabelJp}>{meta.jp}</div>
+                  <div className={styles.typeCardLabelJp} translate="no">{meta.jp}</div>
                   <div className={styles.typeCardLabelId}>{meta.id}</div>
                 </div>
                 <div className={styles.typeCardBody}>
@@ -314,8 +314,8 @@ export default function Results({
               <div key={mapKey} className={styles.reviewCard}>
                 <div className={styles.reviewCardHeader}>
                   <div className={styles.reviewCardHeaderLeft}>
-                    <span className={styles.badgeQuestion}>問題{ans.question_number}</span>
-                    <span className={styles.typePill}>{pillLabel}</span>
+                    <span className={styles.badgeQuestion} translate="no">問題{ans.question_number}</span>
+                    <span className={styles.typePill} translate="no">{pillLabel}</span>
                     {ans.correct ? (
                       <span className={styles.badgeCorrect}>CORRECT</span>
                     ) : (
@@ -353,7 +353,7 @@ export default function Results({
                       </div>
                       {problemMeta?.titleId && (
                         <div className={styles.summarySectionInfo}>
-                          💡 Bagian: P{ans.problem_number} {problemMeta.titleJp} — {problemMeta.titleId}
+                          💡 Bagian: P{ans.problem_number} <span translate="no">{problemMeta.titleJp}</span> — {problemMeta.titleId}
                         </div>
                       )}
                     </div>

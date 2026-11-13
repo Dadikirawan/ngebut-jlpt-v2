@@ -57,22 +57,22 @@ function getSortedHistories(histories) {
 function getLearningTips(avgScore) {
   if (avgScore === 0 || avgScore < 50) {
     return [
-      'Fokus pelajari 漢字読み dan 文法形式の判断 dasar dulu sebelum ke reading panjang.',
-      'Kerjakan 10-15 soal vocab/grammar setiap hari, ulang yang salah sampai hafal pola.',
-      'Gunakan teknik spaced repetition untuk menghafal kosakata dan pola tata bahasa.',
+      <>Fokus pelajari <span translate="no">漢字読み</span> dan <span translate="no">文法形式の判断</span> dasar dulu sebelum ke reading panjang.</>,
+      <>Kerjakan 10-15 soal vocab/grammar setiap hari, ulang yang salah sampai hafal pola.</>,
+      <>Gunakan teknik spaced repetition untuk menghafal kosakata dan pola tata bahasa.</>,
     ]
   }
   if (avgScore >= 50 && avgScore <= 75) {
     return [
-      'Tambah latihan 読解 dan 情報検索 — kerjakan parsing tabel secara teliti.',
-      'Latih 文の組み立て dengan mengenali pola kalimat standar (SVO, wa/ga, dll).',
-      'Coba kerjakan satu set penuh 文章の文法 setiap hari untuk meningkatkan kecepatan.',
+      <>Tambah latihan <span translate="no">読解</span> dan <span translate="no">情報検索</span> — kerjakan parsing tabel secara teliti.</>,
+      <>Latih <span translate="no">文の組み立て</span> dengan mengenali pola kalimat standar (SVO, wa/ga, dll).</>,
+      <>Coba kerjakan satu set penuh <span translate="no">文章の文法</span> setiap hari untuk meningkatkan kecepatan.</>,
     ]
   }
   return [
-    'Bagus! Fokus ke soal 長文 dan coba simulasi full 言語知識(文字・語彙・文法)・読解 110 menit.',
-    'Tingkatkan pemahaman 主張理解 — biasakan mencari thesis statement di awal/akhir paragraf.',
-    'Ulangi simulasi dengan timer; pastikan sisa 10-15 menit untuk cross-check jawaban reading.',
+    <>Bagus! Fokus ke soal <span translate="no">長文</span> dan coba simulasi full <span translate="no">言語知識(文字・語彙・文法)・読解</span> 110 menit.</>,
+    <>Tingkatkan pemahaman <span translate="no">主張理解</span> — biasakan mencari thesis statement di awal/akhir paragraf.</>,
+    <>Ulangi simulasi dengan timer; pastikan sisa 10-15 menit untuk cross-check jawaban reading.</>,
   ]
 }
 
@@ -187,7 +187,7 @@ export default function Progress({ level, onNavigate }) {
                   <span className={styles.typeCardIcon}>
                     {isDone ? '✅' : '⚪'}
                   </span>
-                  <span className={styles.typeCardLabel}>{ta.label}</span>
+                  <span className={styles.typeCardLabel} translate="no">{ta.label}</span>
                 </div>
                 <div className={styles.typeCardDesc}>{ta.desc}</div>
               </div>
@@ -263,7 +263,7 @@ export default function Progress({ level, onNavigate }) {
                   <div className={styles.historyRow3}>
                     {tb.map((t) => (
                       <span key={t.type} className={styles.miniTypeBreakdown}>
-                        <span className={styles.miniTypeLabel}>
+                        <span className={styles.miniTypeLabel} translate="no">
                           {TYPE_LABELS_SHORT[t.type] || t.type}
                         </span>
                         <span>{t.correct || 0}/{t.total || 0}</span>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styles from './viewers.module.css'
 import FeedbackExplanation from './FeedbackExplanation.jsx'
+import Furi from './Furi.jsx'
+import { furiSegments, renderSegments, useFuriganaEnabled } from '../../utils/furigana.js'
 
 const LETTERS = ['A', 'B', 'C', 'D']
 
@@ -22,15 +24,16 @@ function getOptionCardClass(letter, selectedAnswer, showCorrect, answer, disable
   return classes.join(' ')
 }
 
-function renderPassageWithBlanks(passageText, questionNumber) {
+function renderPassageWithBlanks(passageText, questionNumber, segs) {
   if (!passageText) return null
+  const slice = (from, to) => (segs ? renderSegments(segs, from, to) : [passageText.slice(from, to)])
   const parts = []
   const regex = /【(\d+)】/g
   let lastIndex = 0
   let match
   while ((match = regex.exec(passageText)) !== null) {
     if (match.index > lastIndex) {
-      parts.push(passageText.slice(lastIndex, match.index))
+      parts.push(...slice(lastIndex, match.index))
     }
     const num = parseInt(match[1], 10)
     const isCurrent = num === questionNumber
@@ -49,7 +52,7 @@ function renderPassageWithBlanks(passageText, questionNumber) {
     lastIndex = match.index + match[0].length
   }
   if (lastIndex < passageText.length) {
-    parts.push(passageText.slice(lastIndex))
+    parts.push(...slice(lastIndex, passageText.length))
   }
   return parts
 }
@@ -61,6 +64,7 @@ export default function ClozePassageViewer(props) {
   const showCorrect = props.showCorrect !== undefined ? props.showCorrect : false
   const disabled = props.disabled !== undefined ? props.disabled : false
   const [isCollapsed, setIsCollapsed] = useState(true)
+  const furiEnabled = useFuriganaEnabled()
   const options = question.options || {}
   const qn = question.question_number != null ? question.question_number : ''
 
@@ -72,7 +76,7 @@ export default function ClozePassageViewer(props) {
         <div className={styles.passagePanel}>
           <div className={styles.passageHeader}>
             <div className={styles.passageHeaderLeft}>
-              <span className={styles.badgePassageType}>文章の文法</span>
+              <span className={styles.badgePassageType} translate="no">文章の文法</span>
               <span className={styles.passageHeaderTitle}>Konteks Bacaan</span>
             </div>
             <button
@@ -87,15 +91,19 @@ export default function ClozePassageViewer(props) {
 
           {!isCollapsed && (
             <div className={styles.cardBody}>
-              <div className={styles.passageBody}>
-                {renderPassageWithBlanks(question.passage_text, qn)}
+              <div className={styles.passageBody} translate="no">
+                {renderPassageWithBlanks(
+                  question.passage_text,
+                  qn,
+                  furiSegments(question, question.passage_text, furiEnabled)
+                )}
               </div>
             </div>
           )}
         </div>
 
         <div className={styles.questionPanel}>
-          <span className={styles.badgeClozeBlank}>
+          <span className={styles.badgeClozeBlank} translate="no">
             空欄 【{qn}】
           </span>
 
@@ -128,7 +136,9 @@ export default function ClozePassageViewer(props) {
                     onKeyDown={handleKey}
                   >
                     <div className={styles.optionLabelBox}>{letter}</div>
-                    <div className={styles.optionText}>{text}</div>
+                    <div className={styles.optionText} translate="no">
+                      <Furi question={question} text={text} />
+                    </div>
                   </div>
                 </li>
               )
