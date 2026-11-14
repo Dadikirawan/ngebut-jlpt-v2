@@ -6,6 +6,7 @@ import Quiz from './pages/quiz/Quiz.jsx'
 import TryOut from './pages/tryout/TryOut.jsx'
 import Results from './pages/results/Results.jsx'
 import Progress from './pages/progress/Progress.jsx'
+import Vocab from './pages/vocab/Vocab.jsx'
 import { getAggregateAllLevels } from './utils/storage.js'
 
 function App() {
@@ -49,7 +50,7 @@ function App() {
   }, [lastResult])
 
   const handleNavigate = useCallback((targetRoute) => {
-    if (!['dashboard', 'quiz', 'tryout', 'results', 'progress'].includes(targetRoute)) {
+    if (!['dashboard', 'vocab', 'quiz', 'tryout', 'results', 'progress'].includes(targetRoute)) {
       setRoute('dashboard')
       return
     }
@@ -82,6 +83,7 @@ function App() {
           userStats={userStats}
         />
       )}
+      {route === 'vocab' && <Vocab />}
       {route === 'quiz' && (
         <Quiz
           selectedLevel={selectedLevel}

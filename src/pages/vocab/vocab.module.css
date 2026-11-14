@@ -1,0 +1,248 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.motionToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.motionToggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--plum-deep);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search {
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  font: inherit;
+  color: var(--text-h);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.search:focus-visible,
+.chip:focus-visible,
+.motionToggle input:focus-visible {
+  outline: 2px solid var(--plum-deep);
+  outline-offset: 2px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 12px;
+  color: var(--plum-deep);
+  background: var(--plum-soft);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chipActive {
+  color: #fff;
+  background: var(--plum-deep);
+  font-weight: 700;
+}
+
+.count {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--text);
+  background: var(--plum-soft);
+  border-radius: var(--radius-md);
+}
+
+.themeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.themeTitle {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.themeSub {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+/* Kartu flip */
+.card {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  padding: 0;
+  font: inherit;
+  text-align: center;
+  color: var(--text-h);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  perspective: 900px;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--plum-deep);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+.cardInner {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  transition: transform 0.45s ease;
+  transform-style: preserve-3d;
+}
+
+.cardFlipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  box-sizing: border-box;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.back {
+  background: var(--plum-soft);
+  transform: rotateY(180deg);
+}
+
+.kanji {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.kana {
+  font-size: 15px;
+  color: var(--plum-600);
+}
+
+.backKanji {
+  font-size: 14px;
+  color: var(--plum-600);
+}
+
+.meaning {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+/* Kurangi animasi: tanpa transisi, sisi depan/belakang bertukar langsung */
+.card[data-reduce-motion='true'] .cardInner {
+  transition: none;
+  transform: none;
+}
+
+.card[data-reduce-motion='true'] .back {
+  transform: none;
+  display: none;
+}
+
+.card[data-reduce-motion='true'].cardFlipped .front {
+  display: none;
+}
+
+.card[data-reduce-motion='true'].cardFlipped .back {
+  display: flex;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardInner {
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}

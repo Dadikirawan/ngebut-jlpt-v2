@@ -18,6 +18,7 @@ Aplikasi Try Out Soal JLPT Resmi untuk level **N1** dan **N2**, dengan format so
   - Sidebar kiri Home / Vocab / Quiz / Try Out / Progress + Quick Action Cards
   - Header badges: 🔥 Study Streak / ⭐ XP / 🏆 Level JLPT
   - Learner Profile Card dengan XP progress bar ke level berikutnya
+- 📚 **Vocab Flashcard** (`src/pages/vocab`): kartu flip (depan kanji + bacaan, belakang arti Indonesia), pencarian, filter tema, mendukung keyboard (Tab, Enter, Spasi) dan opsi "Kurangi animasi". Tersedia N1 dan N2 (masing-masing 200 kata).
 - 📊 **Progress Tracker per Level** — disimpan ke `localStorage` key `jlpt-progress-n1` / `jlpt-progress-n2`
   - Total riwayat pengerjaan, best score, rata-rata skor, jumlah tipe soal yang sudah dicoba
   - Riwayat 10 sesi terakhir dengan badge skor warna
@@ -61,6 +62,8 @@ npm run preview   # preview hasil build
 
 - `n1_structured.json` — 127 soal level N1, 13 problem
 - `n2_structured.json` — 112 soal level N2, 14 problem
+- `vocab_n1.json`, `vocab_n2.json` — masing-masing 200 kosakata per tema, format tiap kata `"kanji|bacaan|arti"`
+- `loadVocab.js` — loader vocab (`getVocabThemes(level)`, `getVocabCount(level)`, `isVocabAvailable(level)`)
 - `loadQuestions.js` — module akses data dengan caching:
   - `getQuestionsByLevel(level)` — semua soal per level (flatten)
   - `getQuestionsByProblemType(level, type)` — filter by `vocab_grammar_choice` | `sentence_order` | `cloze_passage` | `reading`
