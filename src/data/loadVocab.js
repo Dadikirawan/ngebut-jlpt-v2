@@ -49,3 +49,8 @@ export function getVocabThemes(level) {
 export function getVocabCount(level) {
   return getVocabThemes(level).reduce((sum, theme) => sum + theme.words.length, 0)
 }
+
+// Daftar kata datar (tanpa tema) untuk satu level: [{ id, kanji, kana, meaning }]
+export function getVocabWords(level) {
+  return getVocabThemes(level).flatMap((theme) => theme.words)
+}

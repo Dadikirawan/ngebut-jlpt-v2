@@ -1,5 +1,6 @@
 import { useMemo, useState, useCallback } from 'react'
 import styles from './vocab.module.css'
+import VocabDrill from './VocabDrill.jsx'
 import dashStyles from '../dashboard/dashboard.module.css'
 import {
   VOCAB_LEVELS,
@@ -73,6 +74,7 @@ export default function Vocab() {
   const [level, setLevel] = useState(() => VOCAB_LEVELS.find((l) => isVocabAvailable(l)) || VOCAB_LEVELS[0])
   const [query, setQuery] = useState('')
   const [themeId, setThemeId] = useState('all')
+  const [mode, setMode] = useState('cards')
   const [reduceMotion, setReduceMotion] = useState(() => loadReduceMotion())
 
   const available = isVocabAvailable(level)
@@ -112,16 +114,39 @@ export default function Vocab() {
     <div className={styles.page} translate="no">
       <header className={styles.pageHeader}>
         <div>
-          <h1 className={styles.title}>Vocab Flashcard</h1>
+          <h1 className={styles.title}>{mode === 'cards' ? 'Vocab Flashcard' : 'Vocab Latihan'}</h1>
           <p className={styles.subtitle}>
-            Ketuk kartu untuk melihat arti. Kosakata disusun per tema.
+            {mode === 'cards'
+              ? 'Ketuk kartu untuk melihat arti. Kosakata disusun per tema.'
+              : 'Uji kosakata dari empat arah. Kata yang sering salah akan muncul lebih sering.'}
           </p>
         </div>
-        <label className={styles.motionToggle}>
-          <input type="checkbox" checked={reduceMotion} onChange={handleMotionToggle} />
-          <span>Kurangi animasi</span>
-        </label>
+        {mode === 'cards' && (
+          <label className={styles.motionToggle}>
+            <input type="checkbox" checked={reduceMotion} onChange={handleMotionToggle} />
+            <span>Kurangi animasi</span>
+          </label>
+        )}
       </header>
+
+      <div className={styles.chips} role="group" aria-label="Mode vocab">
+        <button
+          type="button"
+          className={`${styles.chip} ${mode === 'cards' ? styles.chipActive : ''}`}
+          aria-pressed={mode === 'cards'}
+          onClick={() => setMode('cards')}
+        >
+          Kartu
+        </button>
+        <button
+          type="button"
+          className={`${styles.chip} ${mode === 'drill' ? styles.chipActive : ''}`}
+          aria-pressed={mode === 'drill'}
+          onClick={() => setMode('drill')}
+        >
+          Latihan
+        </button>
+      </div>
 
       <div className={dashStyles.levelSelectorWrap}>
         <div className={dashStyles.levelSelectorHeader}>
@@ -150,6 +175,12 @@ export default function Vocab() {
       )}
 
       {available && (
+        <div hidden={mode !== 'drill'}>
+          <VocabDrill key={level} level={level} />
+        </div>
+      )}
+
+      {available && mode === 'cards' && (
         <>
           <div className={styles.controls}>
             <input

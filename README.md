@@ -19,6 +19,7 @@ Aplikasi Try Out Soal JLPT Resmi untuk level **N1** dan **N2**, dengan format so
   - Header badges: 🔥 Study Streak / ⭐ XP / 🏆 Level JLPT
   - Learner Profile Card dengan XP progress bar ke level berikutnya
 - 📚 **Vocab Flashcard** (`src/pages/vocab`): kartu flip (depan kanji + bacaan, belakang arti Indonesia), pencarian, filter tema, mendukung keyboard (Tab, Enter, Spasi) dan opsi "Kurangi animasi". Tersedia N1 dan N2 (masing-masing 200 kata).
+- 🎯 **Latihan Kosakata** (tab "Latihan" di halaman Vocab, logika di `src/utils/vocabDrill.js`): 4 arah soal (kanji→bacaan, bacaan→kanji, kanji→arti, arti→kanji), 4 pilihan jawaban, sesi 10 kata, kotak hafalan 1–4, Review Prioritas, dan reset catatan per level. Catatan hanya tersimpan di perangkat (localStorage, kunci `ngebut-v2-vocab-drill`).
 - 📊 **Progress Tracker per Level** — disimpan ke `localStorage` key `jlpt-progress-n1` / `jlpt-progress-n2`
   - Total riwayat pengerjaan, best score, rata-rata skor, jumlah tipe soal yang sudah dicoba
   - Riwayat 10 sesi terakhir dengan badge skor warna
